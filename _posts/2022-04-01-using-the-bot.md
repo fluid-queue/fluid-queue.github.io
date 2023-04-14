@@ -1,8 +1,37 @@
 ---
 layout: post
-title: "Bot Commands"
-permalink: /commands
+title: "Using the bot"
+permalink: /using
 ---
+
+* Table of Contents Placeholder
+{:toc}
+
+## Running the bot
+
+To use the bot, you'll need to start it.
+
+### Docker
+
+Depending on how your system is set up, you'll need to use either `docker compose` or `docker-compose`. For either, you can start the bot like this to make sure it works and doesn't give you any errors:
+
+`docker compose up`
+
+Once it's running (or if it's giving you a bunch of errors), press Control+C to stop it. If everything's good, you can now run it in detached mode:
+
+`docker compose up -d`
+
+To stop the bot in detached mode, you can use `docker compse down`.
+
+### Native
+
+To run the bot natively, just run:
+
+`npm run start`
+
+and use Control+C to stop the bot.
+
+## Bot operation
 
 The following list contains all commands and aliases accessible to you while using the queue. All commands marked with an asterisk are only accessible to the channel owner.
 
