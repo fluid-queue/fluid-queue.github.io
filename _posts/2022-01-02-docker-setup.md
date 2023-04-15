@@ -24,3 +24,16 @@ And with that out of the way, you can move on to [Using the bot](/using)!
 ## Updates
 
 Updates can be performed as usual with Docker: stop the bot (`docker compose down`), pull your tag (`docker compose pull`), then start the bot again (`docker compose up -d`). If you're on a specific version tag (like `fluidqueue/fluid-queue:2.0.0-beta.1`) make sure you switch tags first!
+
+## Tags
+
+We have a few autobuilds set up, as detailed in the following table:
+
+| Tag                                        | Rule                                                 | Description                                                                                                         |
+|--------------------------------------------|------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------|
+| latest                                     | Every push to `main`                                 | The latest stable updates.                                                                                          |
+| develop                                    | Every push to `develop`                              | The bleeding-edge. May not be as stable, but will always be up to date.                                             |
+| release-*                                  | Every manually tagged stable release (`v1.2.3`, etc) | Specific stable versions.                                                                                           |
+| 2.0.0-beta.1<br>(and similar version tags) | Every manually tagged prerelease.                    | Specific alpha/beta/prerelease versions. Tagged on git as just the version number, rather than with a prefixed `v`. |
+
+In general (and once we've done a proper full release), we would recommend tracking `latest`, however we try to keep `develop` stable as well.
